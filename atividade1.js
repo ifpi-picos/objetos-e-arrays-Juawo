@@ -8,3 +8,5 @@ const aluno = {
 for(let propiedade in aluno){
   console.log(`${propiedade}: ${aluno[propiedade]}`)
 }
+
+console.log("teste commit")

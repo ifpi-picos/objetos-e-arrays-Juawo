@@ -2,4 +2,6 @@
 
 ## Atividades sobre Objetos em JavaScript - 12/07/2024
 ## Atividades sobre Arrays em JavaScript - 19/07/2024
- Questões 8-14 do slide
+ Questões 8-14 do do capítulo 7 slide
+## Atividades sobre formas de manipular arrays em JavaScript - 24/07/2024
+ Questões 15-20 do capítulo 7 do slide 

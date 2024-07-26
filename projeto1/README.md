@@ -1,4 +1,6 @@
-## Descrição do Projeto
+## Projeto Lista de Compras
+
+## Descrição do Projeto 
   Você foi contratado para desenvolver um programa em JavaScript que permita aos usuários
   gerenciar uma lista de compras. O programa deve oferecer as seguintes funcionalidades:
   Objetos, Arrays e Strings 87

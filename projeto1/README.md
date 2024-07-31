@@ -49,5 +49,6 @@
     </li>
   </ol>
 <br>
-<h1 align='center'>Autor</h1>
+
+## Autor
 <p align='center'> João Pedro Rudivalle Medeiros de Amorim </p>

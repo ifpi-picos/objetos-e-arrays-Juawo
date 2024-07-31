@@ -13,30 +13,25 @@ let opcao = exibirMenu()
 let listaCompras = []
 
 while (openClose === true) {
+  opcao = exibirMenu()
   switch (opcao) {
     case 1:
       adicionarItem(listaCompras)
-      opcao = exibirMenu()
       break
     case 2:
       pesquisarItem(listaCompras)
-      opcao = exibirMenu()
       break
     case 3:
       exibirLista(listaCompras)
-      opcao = exibirMenu()
       break
     case 4:
       ordenarLista(listaCompras)
-      opcao = exibirMenu()
       break
     case 5:
       removerItem(listaCompras)
-      opcao = exibirMenu()
       break
     case 6:
       limparLista(listaCompras)
-      opcao = exibirMenu()
       break
     case 7:
       openClose = false
@@ -44,6 +39,5 @@ while (openClose === true) {
       break
     default:
       console.log("Opção inválida! Tente outra.")
-      opcao = exibirMenu()
   }
 }

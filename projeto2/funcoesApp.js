@@ -12,20 +12,53 @@ export function ordenarFilmes(lista) {
 }
 export function pesquisarFilme(lista) {
   const tituloPesquisa = prompt("Pesquise por um filme: ").trim()
-  console.log(lista.find((filme) => filme.titulo == tituloPesquisa))
+  lista.find((filme) => {
+    if (filme.titulo === tituloPesquisa){ 
+      console.log(`Filme encontrado!\n Título: ${filme.titulo}\n Ano de Lançamento: ${filme.anoLancamento}`)
+    } else {
+    console.log(`O Filme ${tituloPesquisa} não foi encontrado!`) }})
 }
+
 export function exibirFilmes(lista) {
-  for (let filme of lista) {
-    console.log(`Título : ${filme.titulo} 
-      Ano de Lançamento : ${filme.anoLancamento}`)
-  }
+  console.log(`-- Lista de Filmes Assistidos --`)
+  console.table(lista)
+  // for (let filme of lista) {
+  //   console.log(`Título : ${filme.titulo} 
+  //     Ano de Lançamento : ${filme.anoLancamento}\n`)
+  // }
 }
+
+export function exibirFilmesAssistidos(listaAssistido) {
+  console.log(`-- Lista de Filmes Assistidos --`)
+  console.table(listaAssistido)
+  // for (let filme of listaAssistido) {
+  //   console.log(`Título : ${filme.titulo} 
+  //     Ano de Lançamento : ${filme.anoLancamento}\n`)
+  // }
+}
+
 export function marcarFilmeAssistido(lista,listaAssistido) {
   const filmeAssistidoAdd = prompt('Qual filme deseja marcar como assistido? ').trim()
-  
+  for(let filme of lista){
+    if(filme.titulo === filmeAssistidoAdd){
+      console.log(`\nO filme ${filmeAssistidoAdd} foi marcado como assistido!`)
+      listaAssistido.push(filme)
+    }
+  }
 }
 export function removerFilme(lista) {
-  return lista
+  const filmeAdd = prompt('Qual filme deseja remover? ').trim()
+  for(let filme of lista){
+    if(filme.titulo === filmeAdd){
+      console.log(`\nO filme ${filmeAdd} foi removido!\n Lista Atual: `)
+      lista.splice(lista.indexOf(filme),1)
+    }
+    if (lista.indexOf(filme) === lista.length - 1) {
+      console.log(
+        `\nO Filme ${filmeAdd} não foi encontrado para ser removido!`
+      )
+    }
+  }
 }
 
 const lista = [
@@ -39,10 +72,13 @@ const lista = [
   },
 ]
 const listaAssistido = [
-  {
-    titulo: "SpiderVerse 2",
-    anoLancamento: 2023,
-  }
 ]
 
+adicionarFilme(lista)
 pesquisarFilme(lista)
+exibirFilmes(listaAssistido)
+ordenarFilmes(lista)
+exibirFilmes(listaAssistido)
+marcarFilmeAssistido(lista,listaAssistido)
+exibirFilmesAssistidos(listaAssistido)
+removerFilme(lista)

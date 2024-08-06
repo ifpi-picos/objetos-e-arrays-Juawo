@@ -27,7 +27,7 @@ export function exibirFilmesAssistidos(listaAssistido) {
 }
 export function marcarFilmeAssistido(lista,listaAssistido) {
   const filmeAssistidoAdd = prompt('Qual filme deseja marcar como assistido? ').trim()
-  const callBack = false
+  const callBack = false // Isso aqui é detalhe
   for(let filme of lista){
     if(filme.titulo === filmeAssistidoAdd){
       listaAssistido.push(filme)
